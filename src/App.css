@@ -1,0 +1,380 @@
+#root {
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+label {
+  color: var(--Gradient02);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  text-align: start;
+}
+
+input {
+  font-family: "Space Grotesk", sans-serif;
+  border: 1px solid var(--Light-grayish-violet);
+  border-radius: 5px;
+  height: 30px;
+  margin-bottom: 13px;
+  padding-left: 10px;
+}
+
+input::placeholder {
+  color: var(--Light-grayish-violet);
+  font-weight: 500;
+  font-family: "Space Grotesk", sans-serif;
+  padding-left: 10px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  background-color: red;
+  background-image: url("./assets/images/bg-main-mobile.png");
+  background-repeat: no-repeat;
+  height: 240px;
+}
+
+.cards-inner-container {
+  position: relative;
+  width: 355px;
+  height: 100%;
+}
+
+.card-01 {
+  position: absolute;
+  top: 25px;
+  right: 0px;
+  background-image: url("./assets/images/bg-card-back.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 200px;
+  width: 270px;
+}
+
+.card-02 {
+  color: white;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 109px;
+  left: 0px;
+  background-image: url("./assets/images/bg-card-front.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 15px;
+  height: 200px;
+  width: 270px;
+}
+
+.cvc {
+  position: absolute;
+  color: var(--White);
+  font-size: 10px;
+  top: 55px;
+  right: 35px;
+}
+
+.app-logo {
+  width: 50px;
+  margin-bottom: 10px;
+}
+
+.card-number {
+  text-align: left;
+  font-size: 19px;
+  letter-spacing: 3px;
+}
+
+.name-date-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.name,
+.expiration-date {
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.name {
+  text-transform: uppercase;
+}
+
+.form-container {
+  padding: 70px 20px 20px 20px;
+}
+
+.name-input,
+.card-number-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.date-cvc-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.exp-date {
+  text-align: left;
+}
+
+.exp-date-input {
+  width: 40%;
+  margin-bottom: 2px;
+}
+
+.exp-date-input:first-child {
+  margin-right: 10px;
+}
+
+.inputs-date-cont {
+  display: flex;
+  justify-content: space-around;
+}
+
+.cvc-input {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-left: 5px;
+  top: 2px;
+}
+
+.cvc-input-field {
+  margin-bottom: 0px;
+}
+
+.submit-btn {
+  background-color: var(--Very-dark-violet);
+  color: white;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  height: 45px;
+  font-family: "Space Grotesk", sans-serif;
+  margin-top: 10px;
+}
+
+.submit-btn:hover,
+.success-btn:hover {
+  background-color: white;
+  color: var(--Very-dark-violet);
+  border: 1px solid var(--Very-dark-violet);
+  cursor: pointer;
+}
+
+.exp-date-label {
+  position: relative;
+  top: -4px;
+}
+
+.success-section-container {
+  padding: 80px 20px 20px 20px;
+}
+
+.thanks-text {
+  font-weight: 500;
+  font-size: 28px;
+  letter-spacing: 2px;
+}
+
+.success-btn {
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  font-family: "Space Grotesk", sans-serif;
+  color: white;
+  width: 100%;
+  background-color: var(--Very-dark-violet);
+  height: 45px;
+}
+
+.success-btn:hover {
+  background-color: white;
+  color: var(--Very-dark-violet);
+  cursor: pointer;
+}
+
+.details-success-text {
+  color: var(--Dark-grayish-violet);
+  font-weight: 500;
+}
+
+.error-msg {
+  color: red;
+  font-size: 12px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.cvc-error-msg {
+  margin-top: 10px;
+}
+
+.input-error {
+  border-color: red;
+}
+
+@media only screen and (min-width: 376px) {
+  .cards-container {
+    background-size: cover;
+  }
+}
+
+@media only screen and (min-width: 1186px) {
+  #root {
+    display: flex;
+    height: 100vh;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 350px;
+    height: 300px;
+  }
+
+  .cards-container {
+    width: 35%;
+    height: 100%;
+  }
+
+  .cards-inner-container {
+    height: 100%;
+    width: 95%;
+  }
+
+  .card-01 {
+    top: 370px;
+    left: 200px;
+    width: 100%;
+    height: 30%;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .card-02 {
+    top: 110px;
+    left: 90px;
+    width: 100%;
+    height: 30%;
+    background-size: contain;
+    background-position: center;
+  }
+
+  .cvc {
+    top: 75px;
+    right: 70px;
+    font-size: 16px;
+  }
+
+  .form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+  }
+
+  .name,
+  .expiration-date {
+    font-size: 14px;
+  }
+
+  .name {
+    margin-left: 30px;
+  }
+
+  .expiration-date {
+    margin-right: 30px;
+  }
+
+  .card-number {
+    font-size: 25px;
+    margin-left: 30px;
+  }
+
+  .app-logo {
+    width: 80px;
+    margin-left: 30px;
+  }
+
+  .success-section-container {
+    height: 100%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+  }
+
+  .success-btn {
+    width: 300px;
+  }
+}
+
+@media only screen and (max-width: 357px) {
+  .card-01 {
+    width: 230px;
+  }
+
+  .card-02 {
+    width: 220px;
+    height: 100px;
+  }
+
+  .cvc {
+    top: 45px;
+  }
+
+  .card-number {
+    font-size: 13px;
+  }
+
+  .name,
+  .expiration-date {
+    font-size: 10px;
+  }
+
+  .date-cvc-container {
+    flex-direction: column;
+  }
+
+  .cvc-input {
+    width: 100%;
+    padding-left: 0px;
+    margin-left: 0px;
+  }
+
+  .inputs-date-cont {
+    justify-content: space-between;
+  }
+
+  .exp-date-input:first-of-type {
+    padding-left: 0px;
+    margin-left: 0px;
+  }
+}
